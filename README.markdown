@@ -4,7 +4,7 @@
 
 The **vim-syntax** repository provides a collection of syntax files for **Vim**. The following syntax files are available:
 
-* **mallard.vim** — A syntax file for the Mallard XML language according to the [Mallard 1.0 DRAFT (as of 2013-02-11)](http://projectmallard.org/1.0/index.html).
+* **mallard.vim** — A syntax file for the Mallard XML language according to [Mallard 1.0 DRAFT (as of 2013-02-11)](http://projectmallard.org/1.0/index.html). See also my [vim-snippets](https://github.com/jhradilek/vim-snippets) repository for snippets for this language.
 
 ## Installation
 
