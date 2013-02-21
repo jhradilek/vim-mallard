@@ -10,11 +10,11 @@ The **vim-syntax** repository provides a collection of syntax files for **Vim**.
 
 To install any of the available syntax files, change into the directory with your local copy of this repository and run the following command:
 
-    cp <filetype>.vim ~/.vim/syntax/
+    cp syntax/<filetype>.vim ~/.vim/syntax/
 
 For example, to install the syntax file for Mallard, type:
 
-    cp mallard.vim ~/.vim/syntax/
+    cp syntax/mallard.vim ~/.vim/syntax/
 
 This copies the selected file to the **~/.vim/syntax/** directory. Note that the directory must exist prior to running this command; to create it, type the following at a shell prompt:
 
