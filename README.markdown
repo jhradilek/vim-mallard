@@ -42,6 +42,8 @@ This copies the selected file to the **~/.vim/syntax/** directory. For example, 
 
 ## Configuration
 
+### Enabling Syntax Highlighting
+
 To enable syntax highlighting in the current session, run the following Vim command:
 
     :syntax on
@@ -55,6 +57,22 @@ You can also explicitly enable file type detection by adding the following line 
     filetype on
 
 For more information on how to enable and configure syntax highlighting in Vim, refer to the [Vim Documentation](http://vimdoc.sourceforge.net/htmldoc/syntax.html).
+
+### Configuring File Type Detection
+
+To change the type of the file you are editing in the current buffer, at any time, run the following Vim command:
+
+    :set filetype=<filetype>
+
+To configure Vim to associate a certain file type with a specific file extension, add the following line to your **~/.vimrc** file:
+
+    au BufNewFile,BufRead *.<extension> setf <filetype>
+
+For example, to configure Vim to treat files with the **.page** file extension as Mallard source files, use:
+
+    au BufNewFile,BufRead *.page setf mallard
+
+For more information on how to configure file type detection in Vim, refer to the [Vim Documentation](http://vimdoc.sourceforge.net/htmldoc/filetype.html).
 
 ## Copyright
 
