@@ -8,6 +8,18 @@ The **vim-syntax** repository provides a collection of syntax files for **Vim**.
 
 ## Installation
 
+### Installing Syntax Files Using Vundle
+
+To install the included syntax files by using the [Vundle](https://github.com/gmarik/vundle) plug-in manager, add the following line to your **~/.vimrc**:
+
+    Bundle 'jhradilek/vim-syntax'
+
+Then run the following command in Vim:
+
+    :BundleInstall
+
+### Installing Syntax Files Manually
+
 Syntax files are locally stored in the **~/.vim/syntax/** directory. To make sure that this directory exists, type the following at a shell prompt:
 
     install -d ~/.vim/syntax/
