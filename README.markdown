@@ -42,15 +42,6 @@ This copies the selected file to the **~/.vim/syntax/** directory. For example, 
 
 
 
-## Uninstallation
-
-To uninstall any of the syntax files, run the following command:
-
-    rm ~/.vim/syntax/<filetype>.vim
-
-For example, to uninstall the syntax file for Mallard, type:
-
-    rm ~/.vim/syntax/mallard.vim
 
 ## Copyright
 
