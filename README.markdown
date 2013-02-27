@@ -8,17 +8,19 @@ The **vim-syntax** repository provides a collection of syntax files for **Vim**.
 
 ## Installation
 
+Syntax files are locally stored in the **~/.vim/syntax/** directory. To make sure that this directory exists, type the following at a shell prompt:
+
+    install -d ~/.vim/syntax/
+
 To install any of the available syntax files, change into the directory with your local copy of this repository and run the following command:
 
     cp syntax/<filetype>.vim ~/.vim/syntax/
 
-For example, to install the syntax file for Mallard, type:
+This copies the selected file to the **~/.vim/syntax/** directory. For example, to install the syntax file for Mallard, type:
 
     cp syntax/mallard.vim ~/.vim/syntax/
 
-This copies the selected file to the **~/.vim/syntax/** directory. Note that the directory must exist prior to running this command; to create it, type the following at a shell prompt:
 
-    install -d ~/.vim/syntax/
 
 ## Uninstallation
 
