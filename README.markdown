@@ -40,8 +40,21 @@ This copies the selected file to the **~/.vim/syntax/** directory. For example, 
 
     cp syntax/mallard.vim ~/.vim/syntax/
 
+## Configuration
 
+To enable syntax highlighting in the current session, run the following Vim command:
 
+    :syntax on
+
+To enable syntax highlighting permanently, add the following line to your **~/.vimrc** file:
+
+    syntax on
+
+You can also explicitly enable file type detection by adding the following line to this file:
+
+    filetype on
+
+For more information on how to enable and configure syntax highlighting in Vim, refer to the [Vim Documentation](http://vimdoc.sourceforge.net/htmldoc/syntax.html).
 
 ## Copyright
 
