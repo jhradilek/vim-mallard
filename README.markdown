@@ -18,6 +18,14 @@ Then run the following command in Vim:
 
     :BundleInstall
 
+### Installing Syntax Files Using Pathogen
+
+[Pathogen](https://github.com/tpope/vim-pathogen) looks for Vim files in the **~/.vim/bundle/** directory. To make sure that this directory exists, type the following at a shell prompt:
+
+    install -d ~/.vim/bundle/
+
+To install the included syntax files, change to the **~/.vim/bundle/** directory and clone this repository there.
+
 ### Installing Syntax Files Manually
 
 Syntax files are locally stored in the **~/.vim/syntax/** directory. To make sure that this directory exists, type the following at a shell prompt:
