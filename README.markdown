@@ -1,44 +1,41 @@
-# Vim Syntax Files
+# vim-mallard
 
 ## Description
 
-The **vim-syntax** repository provides a collection of syntax files for **Vim**. The following syntax files are available:
-
-* **mallard.vim** — A syntax file for the Mallard XML language according to [Mallard 1.0 DRAFT (as of 2013-02-11)](http://projectmallard.org/1.0/index.html). See also my [vim-snippets](https://github.com/jhradilek/vim-snippets) repository for snippets for this language.
+The **vim-mallard** repository provides **mallard.vim**, a syntax file for the Mallard XML language according to [Mallard 1.0 DRAFT (as of 2013-02-11)](http://projectmallard.org/1.0/index.html). See also my [vim-snippets](https://github.com/jhradilek/vim-snippets) repository for snippets for this language.
 
 ## Installation
 
-### Installing Syntax Files Using Vundle
+### Installing the Syntax File Using Vundle
 
-To install the included syntax files by using the [Vundle](https://github.com/gmarik/vundle) plug-in manager, add the following line to your **~/.vimrc**:
+To install the included syntax file by using the [Vundle](https://github.com/gmarik/vundle) plug-in manager, add the following line to your **~/.vimrc**:
 
-    Bundle 'jhradilek/vim-syntax'
+    Bundle 'jhradilek/vim-mallard'
 
 Then run the following command in Vim:
 
     :BundleInstall
 
-### Installing Syntax Files Using Pathogen
+### Installing the Syntax File Using Pathogen
 
 [Pathogen](https://github.com/tpope/vim-pathogen) looks for Vim files in the **~/.vim/bundle/** directory. To make sure that this directory exists, type the following at a shell prompt:
 
     install -d ~/.vim/bundle/
 
-To install the included syntax files, change to the **~/.vim/bundle/** directory and clone this repository there.
+To install the included syntax file, change to the **~/.vim/bundle/** directory and clone this repository in it.
 
-### Installing Syntax Files Manually
+### Installing the Syntax File Manually
 
 Syntax files are locally stored in the **~/.vim/syntax/** directory. To make sure that this directory exists, type the following at a shell prompt:
 
     install -d ~/.vim/syntax/
 
-To install any of the available syntax files, change into the directory with your local copy of this repository and run the following command:
-
-    cp syntax/<filetype>.vim ~/.vim/syntax/
-
-This copies the selected file to the **~/.vim/syntax/** directory. For example, to install the syntax file for Mallard, type:
+To install the included syntax file, change to the directory with your local copy of this repository and run the following command:
 
     cp syntax/mallard.vim ~/.vim/syntax/
+
+This copies the **mallard.vim** file to the **~/.vim/syntax/** directory.
+
 
 ## Configuration
 
@@ -64,11 +61,15 @@ To change the type of the file you are editing in the current buffer, at any tim
 
     :set filetype=<filetype>
 
+For example, to change the file type to Mallard, type:
+
+    :set filetype=mallard
+
 To configure Vim to associate a certain file type with a specific file extension, add the following line to your **~/.vimrc** file:
 
     au BufNewFile,BufRead *.<extension> setf <filetype>
 
-For example, to configure Vim to treat files with the **.page** file extension as Mallard source files, use:
+For instance, to configure Vim to treat files with the **.page** file extension as Mallard source files, use:
 
     au BufNewFile,BufRead *.page setf mallard
 
