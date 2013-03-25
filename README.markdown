@@ -36,7 +36,6 @@ To install the included syntax file, change to the directory with your local cop
 
 This copies the **mallard.vim** file to the **~/.vim/syntax/** directory.
 
-
 ## Configuration
 
 ### Enabling Syntax Highlighting
@@ -55,7 +54,7 @@ You can also explicitly enable file type detection by adding the following line 
 
 For more information on how to enable and configure syntax highlighting in Vim, refer to the [Vim Documentation](http://vimdoc.sourceforge.net/htmldoc/syntax.html).
 
-### Configuring File Type Detection
+### Configuring Automatic File Type Detection
 
 To change the type of the file you are editing in the current buffer, at any time, run the following Vim command:
 
@@ -67,11 +66,11 @@ For example, to change the file type to Mallard, type:
 
 To configure Vim to associate a certain file type with a specific file extension, add the following line to your **~/.vimrc** file:
 
-    au BufNewFile,BufRead *.<extension> setf <filetype>
+    au BufNewFile,BufRead *.<extension> set ft=<filetype>
 
 For instance, to configure Vim to treat files with the **.page** file extension as Mallard source files, use:
 
-    au BufNewFile,BufRead *.page setf mallard
+    au BufNewFile,BufRead *.page set ft=mallard
 
 For more information on how to configure file type detection in Vim, refer to the [Vim Documentation](http://vimdoc.sourceforge.net/htmldoc/filetype.html).
 
