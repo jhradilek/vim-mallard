@@ -56,21 +56,13 @@ You can also explicitly enable file type detection by adding the following line 
 
 For more information on how to enable and configure syntax highlighting in Vim, refer to the [Vim Documentation](http://vimdoc.sourceforge.net/htmldoc/syntax.html).
 
-### Configuring Automatic File Type Detection
+### Configuring File Type Detection
 
-To change the type of the file you are editing in the current buffer, at any time, run the following Vim command:
-
-    :set filetype=<filetype>
-
-For example, to change the file type to Mallard, type:
+To change the type of the file you are editing in the current buffer to Mallard, at any time, run the following Vim command:
 
     :set filetype=mallard
 
-To configure Vim to associate a certain file type with a specific file extension, add the following line to your **~/.vimrc** file:
-
-    au BufNewFile,BufRead *.<extension> set ft=<filetype>
-
-For instance, to configure Vim to treat files with the **.page** file extension as Mallard source files, use:
+To configure Vim to automatically treat files with the **.page** file extension as Mallard source files, add the following line to your **~/.vimrc** file:
 
     au BufNewFile,BufRead *.page set ft=mallard
 
