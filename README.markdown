@@ -2,7 +2,9 @@
 
 ## Description
 
-The **vim-mallard** repository provides **mallard.vim**, a syntax file for the Mallard XML language according to [Mallard 1.0 DRAFT (as of 2013-02-11)](http://projectmallard.org/1.0/index.html). See also my [vim-snippets](https://github.com/jhradilek/vim-snippets) repository for snippets for this language.
+The **vim-mallard** repository adds support for the Mallard XML language to Vim. It provides a syntax file, a filetype plug-in, and omni completion for Mallard 1.0 according to [Mallard 1.0 DRAFT](http://projectmallard.org/1.0/index.html) as of 11 February 2013 and the official [RELAX NG XML schema](http://projectmallard.org/1.0/mallard-1.0.rng).
+
+For a complete set of snippets for this language, see my [vim-snippets](https://github.com/jhradilek/vim-snippets) repository.
 
 ## Installation
 
