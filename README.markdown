@@ -2,15 +2,15 @@
 
 ## Description
 
-The **vim-mallard** repository adds support for the Mallard XML language to Vim. It provides a syntax file, a filetype plug-in, and omni completion for Mallard 1.0 according to [Mallard 1.0 DRAFT](http://projectmallard.org/1.0/index.html) as of 11 February 2013 and the official [RELAX NG XML schema](http://projectmallard.org/1.0/mallard-1.0.rng).
+The **vim-mallard** plug-in adds support for the Mallard XML language to Vim. It provides a syntax file, a filetype plug-in, and omni completion for Mallard 1.0 according to [Mallard 1.0 DRAFT](http://projectmallard.org/1.0/index.html) as of 11 February 2013 and the official [RELAX NG XML schema](http://projectmallard.org/1.0/mallard-1.0.rng).
 
 For a complete set of snippets for this language, see my [vim-snippets](https://github.com/jhradilek/vim-snippets) repository.
 
 ## Installation
 
-### Installing the Syntax File Using Vundle
+### Installing the Plug-in Using Vundle
 
-To install the included syntax file by using the [Vundle](https://github.com/gmarik/vundle) plug-in manager, add the following line to your **~/.vimrc**:
+To install this plug-in by using the [Vundle](https://github.com/gmarik/vundle) plug-in manager, add the following line to your **~/.vimrc**:
 
     Bundle 'jhradilek/vim-mallard'
 
@@ -18,25 +18,25 @@ Then run the following command in Vim:
 
     :BundleInstall
 
-### Installing the Syntax File Using Pathogen
+### Installing the Plug-in Using Pathogen
 
 [Pathogen](https://github.com/tpope/vim-pathogen) looks for Vim files in the **~/.vim/bundle/** directory. To make sure that this directory exists, type the following at a shell prompt:
 
     install -d ~/.vim/bundle/
 
-To install the included syntax file, change to the **~/.vim/bundle/** directory and clone this repository in it.
+To install this plug-in, change to the **~/.vim/bundle/** directory and clone this repository in it.
 
-### Installing the Syntax File Manually
+### Installing the Plug-in Manually
 
-Syntax files are locally stored in the **~/.vim/syntax/** directory. To make sure that this directory exists, type the following at a shell prompt:
+Vim looks for its configuration files in the **~/.vim/** directory. To make sure that this directory exists, type the following at a shell prompt:
 
-    install -d ~/.vim/syntax/
+    mkdir ~/.vim/
 
-To install the included syntax file, change to the directory with your local copy of this repository and run the following command:
+To install this plug-in, change to the directory with your local copy of this repository and run the following command:
 
-    cp syntax/mallard.vim ~/.vim/syntax/
+    cp -R * ~/.vim/
 
-This copies the **mallard.vim** file to the **~/.vim/syntax/** directory.
+This copies all files and directories to the **~/.vim/** directory.
 
 ## Configuration
 
