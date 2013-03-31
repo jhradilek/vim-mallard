@@ -4,7 +4,7 @@
 " URL:         https://github.com/jhradilek/vim-mallard
 " Last Change: 19 March 2013
 " Description: A syntax file for the Mallard markup language according to
-"              Mallard 1.0 DRAFT as of 2013-02-11.
+"              Mallard 1.0 DRAFT as of 11 February 2013.
 
 if exists("b:current_syntax")
   finish
