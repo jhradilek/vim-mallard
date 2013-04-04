@@ -217,4 +217,11 @@ let g:xmldata_mallard10 = {
 \ ['app', 'cmd', 'code', 'em', 'file', 'gui', 'guiseq', 'input', 'key', 'keyseq', 'link', 'media', 'output', 'span', 'sys', 'var'],
 \ {'mime': [], 'style': []}
 \ ],
+\ 'vimxmltaginfo': {
+\ 'col': ['/>', ''],
+\ 'link': ['/>', ''],
+\ 'links': ['/>', ''],
+\ 'media': ['/>', ''],
+\ 'revision': ['/>', ''],
+\ },
 \ }
