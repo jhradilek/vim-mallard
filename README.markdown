@@ -1,10 +1,8 @@
-# vim-mallard
+# Mallard Support for Vim
 
 ## Description
 
-The **vim-mallard** plug-in adds support for the Mallard XML language to Vim. It provides a syntax file, a filetype plug-in, and omni completion for Mallard 1.0 according to [Mallard 1.0 DRAFT](http://projectmallard.org/1.0/index.html) as of 11 February 2013 and the official [RELAX NG XML schema](http://projectmallard.org/1.0/mallard-1.0.rng).
-
-For a complete set of snippets for this language, see my [vim-snippets](https://github.com/jhradilek/vim-snippets) repository.
+The **vim-mallard** plug-in adds support for the Mallard XML language to Vim. It provides a syntax file, a filetype plug-in, and omni completion for Mallard 1.0 according to the [Mallard 1.0 specification](http://projectmallard.org/1.0/index.html) and the official [RELAX NG XML schema](http://projectmallard.org/1.0/mallard-1.0.rng).
 
 ## Installation
 
@@ -67,6 +65,10 @@ To configure Vim to automatically treat files with the **.page** file extension 
     au BufNewFile,BufRead *.page set ft=mallard
 
 For more information on how to configure file type detection in Vim, refer to the [Vim Documentation](http://vimdoc.sourceforge.net/htmldoc/filetype.html).
+
+## See Also
+
+* [vim-snippets](https://github.com/jhradilek/vim-snippets) — A complete set of snippets for the Mallard XML language.
 
 ## Copyright
 

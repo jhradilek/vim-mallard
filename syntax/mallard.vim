@@ -2,9 +2,9 @@
 " Language:    Mallard
 " Maintainer:  Jaromir Hradilek <jhradilek@gmail.com>
 " URL:         https://github.com/jhradilek/vim-mallard
-" Last Change: 19 March 2013
+" Last Change: 25 July 2013
 " Description: A syntax file for the Mallard markup language according to
-"              Mallard 1.0 DRAFT as of 11 February 2013.
+"              the Mallard 1.0 specification.
 
 if exists("b:current_syntax")
   finish
