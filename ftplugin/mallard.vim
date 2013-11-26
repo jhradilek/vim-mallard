@@ -29,6 +29,11 @@ if !exists('g:mallard_status_cmd')
   let g:mallard_status_cmd = 'yelp-check status'
 endif
 
+" Define the command to validate a Mallard document:
+if !exists('g:mallard_validate_cmd')
+  let g:mallard_validate_cmd = 'yelp-check validate'
+endif
+
 " Ensure that the selected buffer is saved and execute an external command
 " on it:
 function! s:ExecuteCommandOnBuffer(command, buffer)
@@ -36,8 +41,10 @@ function! s:ExecuteCommandOnBuffer(command, buffer)
     echohl ErrorMsg
     echo 'No write since last change.'
     echohl None
+    return 1
   else
     echo system(a:command . ' ' . bufname(a:buffer))
+    return v:shell_error
   endif
 endfunction
 
@@ -59,10 +66,19 @@ function! MallardStatus()
   call s:ExecuteCommandOnBuffer(g:mallard_status_cmd, '%')
 endfunction
 
+" Validate the currently edited Mallard document:
+function! MallardValidate()
+  echo 'Validating the current buffer...'
+  if s:ExecuteCommandOnBuffer(g:mallard_validate_cmd, '%') == 0
+    echo "Validation OK."
+  endif
+endfunction
+
 " Define user commands:
 command! -nargs=0 MallardComments call MallardComments()
 command! -nargs=0 MallardHrefs call MallardHrefs()
 command! -nargs=0 MallardStatus call MallardStatus()
+command! -nargs=0 MallardValidate call MallardValidate()
 
 " Load the filetype plugin file for the XML language:
 runtime! ftplugin/xml.vim ftplugin/xml_*.vim ftplugin/xml/*.vim
