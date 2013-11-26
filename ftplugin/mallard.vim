@@ -24,6 +24,11 @@ if !exists('g:mallard_hrefs_cmd')
   let g:mallard_hrefs_cmd = 'yelp-check hrefs'
 endif
 
+" Define the command to display the current status of a Mallard document:
+if !exists('g:mallard_status_cmd')
+  let g:mallard_status_cmd = 'yelp-check status'
+endif
+
 " Ensure that the selected buffer is saved and execute an external command
 " on it:
 function! s:ExecuteCommandOnBuffer(command, buffer)
@@ -48,9 +53,16 @@ function! MallardHrefs()
   call s:ExecuteCommandOnBuffer(g:mallard_hrefs_cmd, '%')
 endfunction
 
+" Display the current status of the currently edited Mallard document:
+function! MallardStatus()
+  echo 'Checking the status of the current buffer...'
+  call s:ExecuteCommandOnBuffer(g:mallard_status_cmd, '%')
+endfunction
+
 " Define user commands:
 command! -nargs=0 MallardComments call MallardComments()
 command! -nargs=0 MallardHrefs call MallardHrefs()
+command! -nargs=0 MallardStatus call MallardStatus()
 
 " Load the filetype plugin file for the XML language:
 runtime! ftplugin/xml.vim ftplugin/xml_*.vim ftplugin/xml/*.vim
