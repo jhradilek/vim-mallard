@@ -19,6 +19,11 @@ if !exists('g:mallard_comments_cmd')
   let g:mallard_comments_cmd = 'yelp-check comments'
 endif
 
+" Define the command to list broken external links in a Mallard document:
+if !exists('g:mallard_hrefs_cmd')
+  let g:mallard_hrefs_cmd = 'yelp-check hrefs'
+endif
+
 " Ensure that the selected buffer is saved and execute an external command
 " on it:
 function! s:ExecuteCommandOnBuffer(command, buffer)
@@ -37,8 +42,15 @@ function! MallardComments()
   call s:ExecuteCommandOnBuffer(g:mallard_comments_cmd, '%')
 endfunction
 
+" List broken external links in the currently edited Mallard document:
+function! MallardHrefs()
+  echo 'Checking external links in the current buffer...'
+  call s:ExecuteCommandOnBuffer(g:mallard_hrefs_cmd, '%')
+endfunction
+
 " Define user commands:
 command! -nargs=0 MallardComments call MallardComments()
+command! -nargs=0 MallardHrefs call MallardHrefs()
 
 " Load the filetype plugin file for the XML language:
 runtime! ftplugin/xml.vim ftplugin/xml_*.vim ftplugin/xml/*.vim
