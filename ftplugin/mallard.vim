@@ -14,6 +14,32 @@ endif
 let s:save_cpo = &cpo
 set cpo&vim
 
+" Define the command to display editorial comments in a Mallard document:
+if !exists('g:mallard_comments_cmd')
+  let g:mallard_comments_cmd = 'yelp-check comments'
+endif
+
+" Ensure that the selected buffer is saved and execute an external command
+" on it:
+function! s:ExecuteCommandOnBuffer(command, buffer)
+  if &modified || empty(bufname('%'))
+    echohl ErrorMsg
+    echo 'No write since last change.'
+    echohl None
+  else
+    echo system(a:command . ' ' . bufname(a:buffer))
+  endif
+endfunction
+
+" Display editorial comments in the currently edited Mallard document:
+function! MallardComments()
+  echo 'Looking for editorial comments in the current buffer...'
+  call s:ExecuteCommandOnBuffer(g:mallard_comments_cmd, '%')
+endfunction
+
+" Define user commands:
+command! -nargs=0 MallardComments call MallardComments()
+
 " Load the filetype plugin file for the XML language:
 runtime! ftplugin/xml.vim ftplugin/xml_*.vim ftplugin/xml/*.vim
 
